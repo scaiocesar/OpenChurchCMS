@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #6EC1E4;
+  --secondary: #54595F;
+  --accent: #61CE70;
+  --text: #333333;
+  --light: #fafafa;
+  --dark: #1a1a1a;
+}
+
+@theme inline {
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-background: #ffffff;
+  --color-foreground: var(--text);
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+}
+
+body {
+  font-family: var(--font-body), sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), serif;
+  font-weight: 600;
+  text-transform: uppercase;
+}
