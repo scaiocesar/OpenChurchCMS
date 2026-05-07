@@ -44,7 +44,7 @@ const getHomeContentMapCached = unstable_cache(
   async () => {
     const content = await prisma.homeContent.findMany()
     const map: Record<string, string> = {}
-    content.forEach((item) => {
+    content.forEach((item: { key: string; value: string }) => {
       map[item.key] = item.value
     })
     return map
@@ -202,7 +202,7 @@ export async function getLocations() {
 export async function getHomeContentMapUncached() {
   const content = await prisma.homeContent.findMany()
   const map: Record<string, string> = {}
-  content.forEach((item) => {
+  content.forEach((item: { key: string; value: string }) => {
     map[item.key] = item.value
   })
   return map
@@ -236,7 +236,7 @@ export async function getChurchJsonLd(): Promise<ChurchJsonLd> {
   }
 
   const openingHoursMap: Record<string, { opens: string; closes: string }> = {}
-  massSchedules.forEach((schedule) => {
+  massSchedules.forEach((schedule: { day: string; time: string }) => {
     const day = schedule.day.toLowerCase()
     if (!openingHoursMap[day] || schedule.time < openingHoursMap[day].opens) {
       openingHoursMap[day] = { opens: schedule.time, closes: getClosingTime(schedule.time) }

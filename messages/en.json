@@ -1,0 +1,92 @@
+{
+  "Nav": {
+    "home": "Home",
+    "schedule": "Schedule",
+    "gallery": "Gallery",
+    "bulletin": "Bulletin",
+    "contact": "Contact",
+    "menu": "Menu"
+  },
+  "Footer": {
+    "hours": "Hours",
+    "location": "Location",
+    "contact": "Contact",
+    "copyright": "© {year} | {name}"
+  },
+  "Home": {
+    "welcome": "Welcome",
+    "learnMore": "Learn More",
+    "events": "Events",
+    "massSchedule": "Mass Schedule",
+    "joinWorship": "Join Us for Worship",
+    "noSchedules": "No schedules available yet.",
+    "unassignedLocation": "Unassigned location",
+    "sundays": "Sundays",
+    "dailyMasses": "Daily Masses",
+    "adoration": "Adoration",
+    "confessions": "Confessions",
+    "specialMasses": "Special Masses",
+    "gallery": "Gallery",
+    "photoGallery": "Photo Gallery",
+    "ctaTitle": "Join Our Faith Community",
+    "ctaSubtitle": "Become a part of our welcoming parish and explore how you can contribute to our shared mission of faith."
+  },
+  "Language": {
+    "label": "Language",
+    "en": "English",
+    "pt": "Português",
+    "es": "Español"
+  },
+  "Login": {
+    "title": "CMS Login",
+    "subtitle": "Enter your credentials to manage content",
+    "username": "Username",
+    "password": "Password",
+    "submit": "Login",
+    "loggingIn": "Logging in...",
+    "backToSite": "Back to Website",
+    "errorGeneric": "An error occurred",
+    "errorInvalid": "Invalid credentials"
+  },
+  "Admin": {
+    "loading": "Loading...",
+    "dashboardTitle": "Admin Dashboard",
+    "cmsTitle": "OpenChurch CMS",
+    "viewSite": "View Site",
+    "logout": "Logout",
+    "dashboard": "Dashboard",
+    "home": "Home",
+    "sections": "Sections",
+    "locations": "Locations",
+    "massSchedule": "Mass Schedule",
+    "specialMasses": "Special Masses",
+    "gallery": "Gallery",
+    "bulletins": "Bulletins",
+    "social": "Social Links",
+    "settings": "Settings",
+    "seo": "SEO",
+    "password": "Password",
+    "adminUsers": "Admin users",
+    "theme": "Theme",
+    "manageUsers": "Manage admin users and permissions",
+    "manageSchedule": "Manage regular mass times",
+    "manageSpecial": "Manage special masses and events",
+    "manageGallery": "Manage photo gallery",
+    "manageSocial": "Manage social media links"
+  },
+  "GalleryPage": {
+    "title": "Photo Gallery",
+    "emptyLine1": "No photos available at this time.",
+    "emptyLine2": "Please check back later for updates from our parish community."
+  },
+  "BulletinPage": {
+    "title": "Weekly Bulletin",
+    "current": "Current Bulletin",
+    "viewPdf": "View Bulletin (PDF)",
+    "noCurrent": "No current bulletin available.",
+    "past": "Past Bulletins",
+    "viewPdfShort": "View PDF →",
+    "emptyLine1": "No bulletins available at this time.",
+    "emptyLine2": "Please check back later for our weekly parish bulletins."
+  }
+}
