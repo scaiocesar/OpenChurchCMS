@@ -1,0 +1,92 @@
+{
+  "Nav": {
+    "home": "Início",
+    "schedule": "Horários",
+    "gallery": "Galeria",
+    "bulletin": "Boletim",
+    "contact": "Contato",
+    "menu": "Menu"
+  },
+  "Footer": {
+    "hours": "Horário",
+    "location": "Localização",
+    "contact": "Contato",
+    "copyright": "© {year} | {name}"
+  },
+  "Home": {
+    "welcome": "Bem-vindo",
+    "learnMore": "Saiba mais",
+    "events": "Eventos",
+    "massSchedule": "Horário das missas",
+    "joinWorship": "Venha celebrar conosco",
+    "noSchedules": "Nenhum horário disponível no momento.",
+    "unassignedLocation": "Local não atribuído",
+    "sundays": "Domingos",
+    "dailyMasses": "Missas durante a semana",
+    "adoration": "Adoração",
+    "confessions": "Confissões",
+    "specialMasses": "Missas especiais",
+    "gallery": "Galeria",
+    "photoGallery": "Galeria de fotos",
+    "ctaTitle": "Faça parte da nossa comunidade de fé",
+    "ctaSubtitle": "Integre-se à nossa paróquia acolhedora e descubra como pode contribuir para a nossa missão comum de fé."
+  },
+  "Language": {
+    "label": "Idioma",
+    "en": "English",
+    "pt": "Português",
+    "es": "Español"
+  },
+  "Login": {
+    "title": "Acesso ao CMS",
+    "subtitle": "Digite suas credenciais para gerenciar o conteúdo",
+    "username": "Usuário",
+    "password": "Senha",
+    "submit": "Entrar",
+    "loggingIn": "Entrando...",
+    "backToSite": "Voltar ao site",
+    "errorGeneric": "Ocorreu um erro",
+    "errorInvalid": "Credenciais inválidas"
+  },
+  "Admin": {
+    "loading": "Carregando...",
+    "dashboardTitle": "Painel administrativo",
+    "cmsTitle": "OpenChurch CMS",
+    "viewSite": "Ver site",
+    "logout": "Sair",
+    "dashboard": "Painel",
+    "home": "Início",
+    "sections": "Seções",
+    "locations": "Locais",
+    "massSchedule": "Horário das missas",
+    "specialMasses": "Missas especiais",
+    "gallery": "Galeria",
+    "bulletins": "Boletins",
+    "social": "Redes sociais",
+    "settings": "Configurações",
+    "seo": "SEO",
+    "password": "Palavra-passe",
+    "adminUsers": "Administradores",
+    "theme": "Tema",
+    "manageUsers": "Gerenciar administradores e permissões",
+    "manageSchedule": "Gerenciar horários regulares de missa",
+    "manageSpecial": "Gerenciar missas e eventos especiais",
+    "manageGallery": "Gerenciar galeria de fotos",
+    "manageSocial": "Gerenciar links de redes sociais"
+  },
+  "GalleryPage": {
+    "title": "Galeria de fotos",
+    "emptyLine1": "Não há fotos disponíveis no momento.",
+    "emptyLine2": "Volte em breve para novidades da nossa comunidade paroquial."
+  },
+  "BulletinPage": {
+    "title": "Boletim semanal",
+    "current": "Boletim atual",
+    "viewPdf": "Ver boletim (PDF)",
+    "noCurrent": "Não há boletim atual disponível.",
+    "past": "Boletins anteriores",
+    "viewPdfShort": "Ver PDF →",
+    "emptyLine1": "Não há boletins disponíveis no momento.",
+    "emptyLine2": "Volte em breve para ver os boletins semanais da paróquia."
+  }
+}

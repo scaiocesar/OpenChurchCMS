@@ -1,5 +1,7 @@
-import Link from 'next/link'
 import Image from 'next/image'
+import { getTranslations } from 'next-intl/server'
+import { Link } from '@/i18n/navigation'
+import LanguageSwitcher from '@/components/LanguageSwitcher'
 import { getActiveSections, getActiveSocialLinks, getHomeContentMap } from '@/lib/publicSite'
 
 function SocialIcon({ platform }: { platform: string }) {
@@ -32,11 +34,13 @@ function SocialIcon({ platform }: { platform: string }) {
 }
 
 export default async function SiteHeader() {
-  const [sections, homeContent, socialLinks] = await Promise.all([
+  const [sections, homeContent, socialLinks, t] = await Promise.all([
     getActiveSections(),
     getHomeContentMap(),
     getActiveSocialLinks(),
+    getTranslations('Nav'),
   ])
+
   const defaultParishName = 'St Henry Catholic Church'
   const parishName = homeContent.parishName || homeContent.churchName || defaultParishName
   const parishLogo = homeContent.parishLogo || homeContent.churchLogo || null
@@ -77,10 +81,10 @@ export default async function SiteHeader() {
           )}
         </div>
 
-        <div className="hidden lg:flex items-center gap-5 xl:gap-6">
+        <div className="hidden lg:flex items-center gap-4 xl:gap-5">
           <nav className="hidden lg:flex gap-6 xl:gap-8">
             <Link href="/" className="text-[var(--secondary)] hover:text-[var(--primary)] font-medium">
-              Home
+              {t('home')}
             </Link>
             {sections.map((section) => (
               <Link
@@ -92,18 +96,19 @@ export default async function SiteHeader() {
               </Link>
             ))}
             <Link href="/#schedule" className="text-[var(--secondary)] hover:text-[var(--primary)] font-medium">
-              Schedule
+              {t('schedule')}
             </Link>
             <Link href="/gallery" className="text-[var(--secondary)] hover:text-[var(--primary)] font-medium">
-              Gallery
+              {t('gallery')}
             </Link>
             <Link href="/bulletin" className="text-[var(--secondary)] hover:text-[var(--primary)] font-medium">
-              Bulletin
+              {t('bulletin')}
             </Link>
             <Link href="/#contact" className="text-[var(--secondary)] hover:text-[var(--primary)] font-medium">
-              Contact
+              {t('contact')}
             </Link>
           </nav>
+          <LanguageSwitcher />
           {socialLinks.length > 0 && (
             <div className="flex items-center gap-2 pl-1 border-l border-gray-200">
               {socialLinks.map((link) => (
@@ -125,12 +130,15 @@ export default async function SiteHeader() {
 
         <details className="lg:hidden relative">
           <summary className="list-none cursor-pointer px-3 py-2 rounded border text-[var(--secondary)] text-sm font-medium">
-            Menu
+            {t('menu')}
           </summary>
           <div className="absolute right-0 mt-2 w-72 max-h-[70vh] overflow-auto bg-white border rounded-lg shadow-lg p-3">
+            <div className="mb-3 px-2">
+              <LanguageSwitcher />
+            </div>
             <nav className="flex flex-col">
               <Link href="/" className="px-3 py-2 rounded hover:bg-gray-100 text-[var(--secondary)]">
-                Home
+                {t('home')}
               </Link>
               {sections.map((section) => (
                 <Link
@@ -142,16 +150,16 @@ export default async function SiteHeader() {
                 </Link>
               ))}
               <Link href="/#schedule" className="px-3 py-2 rounded hover:bg-gray-100 text-[var(--secondary)]">
-                Schedule
+                {t('schedule')}
               </Link>
               <Link href="/gallery" className="px-3 py-2 rounded hover:bg-gray-100 text-[var(--secondary)]">
-                Gallery
+                {t('gallery')}
               </Link>
               <Link href="/bulletin" className="px-3 py-2 rounded hover:bg-gray-100 text-[var(--secondary)]">
-                Bulletin
+                {t('bulletin')}
               </Link>
               <Link href="/#contact" className="px-3 py-2 rounded hover:bg-gray-100 text-[var(--secondary)]">
-                Contact
+                {t('contact')}
               </Link>
             </nav>
           </div>

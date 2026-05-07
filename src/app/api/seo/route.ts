@@ -7,7 +7,7 @@ export async function GET() {
   const content = await prisma.homeContent.findMany()
   
   const seoMap: Record<string, string> = {}
-  content.forEach((item) => {
+  content.forEach((item: { key: string; value: string }) => {
     seoMap[item.key] = item.value
   })
 

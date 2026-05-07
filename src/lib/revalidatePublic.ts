@@ -1,4 +1,6 @@
 import { revalidatePath, revalidateTag } from 'next/cache'
+import { localePrefixMode } from '@/i18n/localePrefix'
+import { routing } from '@/i18n/routing'
 
 const PUBLIC_TAGS = [
   'home-content',
@@ -12,10 +14,25 @@ const PUBLIC_TAGS = [
   'locations',
 ] as const
 
-const PUBLIC_PATHS = ['/', '/gallery', '/bulletin', '/sitemap.xml'] as const
+const PUBLIC_PATH_SUFFIXES = ['/', '/gallery', '/bulletin'] as const
+
+function localizedPaths(suffix: string): string[] {
+  const mode = localePrefixMode()
+  return routing.locales.map((locale) => {
+    const needsLocalePrefix =
+      mode === 'always' || (mode === 'as-needed' && locale !== routing.defaultLocale)
+
+    if (!needsLocalePrefix) {
+      return suffix
+    }
+    return suffix === '/' ? `/${locale}` : `/${locale}${suffix}`
+  })
+}
 
 export function revalidatePublicContent() {
   PUBLIC_TAGS.forEach((tag) => revalidateTag(tag, 'max'))
-  PUBLIC_PATHS.forEach((path) => revalidatePath(path))
-  revalidatePath('/sections/[category]', 'page')
+  for (const suffix of PUBLIC_PATH_SUFFIXES) {
+    localizedPaths(suffix).forEach((path) => revalidatePath(path))
+  }
+  revalidatePath('/sitemap.xml')
 }
